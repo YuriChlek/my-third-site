@@ -277,6 +277,7 @@ div.about{
 }
 
 .wrapper .single-services .service .text {
+    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 100px;
