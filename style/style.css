@@ -5,26 +5,37 @@
 }
 
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.7;
 }
+
 a {
     text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-}
-h2 {
-    font-size: 48px;
+    line-height: 1.4;
 }
 
-h4 {
+h2.welcome {
+    font-size: 47px;
+}
+h2{
     font-size: 20px;
 }
-
+h3{
+    font-size: 14px;
+}
+h4 {
+    font-size: 18px;
+}
+h4.your-favorite{
+    font-family: 'Roboto Slab', sans-serif;
+}
 h5 {
     font-size: 16px;
 }
@@ -33,14 +44,22 @@ h6 {
     font-size: 14px;
 }
 
+p.sub-title{
+    font-size: 16px;
+    margin-bottom: 65px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+}
+
 .wrapper {
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 95px 15px;
 }
 
 /*---header----*/
 header {
+
     color: white;
     background-image: url("/img/wall.png");
     background-position: center;
@@ -48,7 +67,8 @@ header {
     background-size: cover;
     position: relative;
 }
-header::after{
+
+header::after {
     display: block;
     content: '';
     position: absolute;
@@ -58,35 +78,78 @@ header::after{
     bottom: 0;
     background-color: rgba(0, 0, 0, .45);
 }
-header .wrapper{
+
+header .wrapper {
+   padding: 0 15px;
     position: relative;
     z-index: 10;
 }
+
 header nav.header-navigation {
     padding: 40px 0 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
-header .logotype{
+
+header .logotype {
     width: 91px;
 
 }
 
-header .menu-wrapper{
+header .menu-wrapper {
     width: calc(100% - 91px);
     font-family: 'Montserrat', sans-serif;
 }
 
-header .menu-wrapper .menu-bottoms{
+header .menu-wrapper .hamburger-menu {
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2px;
+    padding: 3px;
+    border: 2px solid #ffffff;
+    position: absolute;
+    right: 15px;
+    top: 37px;
+
+}
+
+header .menu-wrapper .hamburger-menu .horizontal-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    transition: 500ms all ease-out;
+}
+
+header .menu-wrapper .hamburger-menu.active .horizontal-line:first-child {
+    transform: translateY(7px) rotate(-405deg);
+}
+
+header .menu-wrapper .hamburger-menu.active .horizontal-line:nth-child(2) {
+    opacity: 0;
+}
+
+header .menu-wrapper .hamburger-menu.active .horizontal-line:last-child {
+    transform: translateY(-7px) rotate(405deg);
+}
+
+header .menu-wrapper .menu-bottoms {
     display: flex;
     justify-content: flex-end;
     padding: 0;
 }
-header .menu-bottoms li{
-    list-style-type: none;
-    padding: 0 15px;
 
+
+header .menu-bottoms li {
+    list-style-type: none;
+    padding: 0 17px;
+}
+header .menu-bottoms li:last-child{
+    margin-right: -17px;
 }
 header .menu-bottoms a {
     color: #ffffff;
@@ -95,19 +158,15 @@ header .menu-bottoms a {
     letter-spacing: 0.35px;
 }
 
-
-
-
 header .captions {
     text-align: center;
-    padding: 255px 0;
+    padding: 237px 0;
 }
 
 header .captions .welcome,
 header .captions .your-favorite {
-    line-height: 24px;
-    padding-bottom: 30px;
-    letter-spacing: 1px;
+    padding-bottom: 13px;
+    letter-spacing: 1.1px;
 }
 
 
@@ -117,16 +176,18 @@ header .captions .welcome {
 
 header .captions .your-favorite {
     text-transform: capitalize;
+
 }
 
-header .captions button {
+header .captions .button {
+    display: inline-block;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 24px;
-    margin-top: 20px;
-    padding: 19px 34px;
+    margin: 37px 0 23px;
+    padding: 11px 34px;
     border: solid 2px #ffffff;
     background-color: rgba(0, 0, 0, 0);
     letter-spacing: 1px;
@@ -134,6 +195,9 @@ header .captions button {
 
 
 /*-----selection--------*/
+div.about{
+    background-color: #f8f8f8;
+}
 .main-wrapper .services{
     background-color: #ffffff;
 
@@ -142,38 +206,46 @@ header .captions button {
     text-align: center;
 }
 
-.wrapper .selection .item {
+.wrapper .selection .title {
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     line-height: 24px;
 }
 
-.wrapper .selection .item:after {
+.wrapper .selection .title::after {
     content: '';
     display: block;
     width: 50px;
     background-color: #555555;
     height: 2px;
-    margin: 29px auto;
+    margin: 24px auto;
+}
+.wrapper .selection .sub-title{
+    font-size: 16px;
+    letter-spacing: 0.1px;
 }
 
 /*-----single-services--------*/
 .wrapper .single-services {
-    padding: 70px 0 100px;
     display: flex;
     justify-content: space-between;
 }
-
-.wrapper .single-services .item {
-    max-width: 345px;
+.wrapper .single-services .service{
+    margin-right: 45px;
+    width: calc(33.33% - 30px);
 }
+.wrapper .single-services .service:last-child{
+    margin-right: 0;
+}
+
 
 .wrapper .single-services .service .ellipse {
     width: 90px;
     height: 90px;
     border: 2px solid #dddddd;
     border-radius: 50%;
-    margin: 0 auto 30px;
+    margin: 0 auto 24px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 45px;
@@ -201,23 +273,25 @@ header .captions button {
     text-transform: uppercase;
     line-height: 24px;
     font-weight: bold;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
 .wrapper .single-services .service .text {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 100px;
+    font-family: "Roboto Slab", sans-serif;
 }
 
-/*---about---*/
 .main-wrapper .about {
     background-color: #f8f8f8;
 }
 .wrapper .content-wrapper{
-    margin-top: 71px;
+    margin-top: -4px;
     display: flex;
     justify-content: space-between;
+    column-count: 2;
+    column-gap: 32px;
 }
 
 .wrapper .content-wrapper .content{
@@ -225,11 +299,12 @@ header .captions button {
     width: calc(50% - 16px);
     font-size: 14px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: bold;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 .wrapper .layer-wrapper {
-    margin: 70px -15px 0;
+    margin: 67px -15px 0;
     display: flex;
 
 }
@@ -259,6 +334,8 @@ header .captions button {
 }
 .wrapper .layer-wrapper .layer .photo-wrapper img{
     display: block;
+
+    width: 100%;
 }
 
 .wrapper .layer-wrapper .layer .photo-wrapper:hover::after{
@@ -318,4 +395,79 @@ header .captions button {
 }
 .wrapper .layer .photo-wrapper .contact .social-network:last-child{
     background-image: url("/img/fa-linkedin.png");
+}
+.wrapper .layer .post-name{
+    text-align: center;
+    padding-top: 15px;
+}
+.wrapper .layer .post-name .author{
+    margin-bottom: 5px;
+}
+.wrapper .layer .post-name .profile{
+    font-family: "Roboto Slab", sans-serif;
+    letter-spacing: 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 767px) {
+    h2.welcome{
+        font-size: 30px;
+    }
+    body.active {
+        overflow: hidden;
+    }
+    p.sub-title{
+        margin-bottom: 35px;
+    }
+    .wrapper{
+        padding: 50px 15px;
+    }
+    header{
+        height: 100vh;
+    }
+    header .captions{
+        padding: 50px 0;
+    }
+    header .menu-wrapper .hamburger-menu {
+        display: flex;
+    }
+
+    header .menu-wrapper .menu-bottoms {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, .5);
+        overflow: auto;
+        border-top: solid 1px #ffffff;
+        transition: bottom 500ms ease-out;
+    }
+    header .menu-wrapper .menu-bottoms.active{
+        display: block;
+        bottom: 0;
+    }
+
+    header .menu-bottoms li {
+        border-bottom: solid 1px #ffffff;
+        padding: 15px;
+        text-align: center;
+        background-color: #c0301c
+    }
+    .wrapper .single-services{
+        display: block;
+    }
+    .wrapper .single-services .service{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 350px;
+        padding-bottom: 30px;
+    }
+    .wrapper .single-services .service:last-child{
+        margin-right: auto;
+    }
 }
