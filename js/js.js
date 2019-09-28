@@ -25,10 +25,8 @@
     $('.layer-wrapper').slick({
         infinite: true,
         speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        prevArrow: 0,//дописати
-        nextArrow: 0,//дописати
+        prevArrow: '<div class="prev right"><img src="/img/fa-angle-right.png" alt="prev"></div>',
+        nextArrow: '<div class="prev left"><img src="/img/fa-angle-left.png" alt="prev"></div>',
         responsive: [
             {
                 breakpoint: 1024,
@@ -40,23 +38,20 @@
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 320,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
-    });
+    })
 
 })();

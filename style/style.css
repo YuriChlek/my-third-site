@@ -307,6 +307,7 @@ div.about{
 .wrapper .layer-wrapper {
     margin: 67px -15px 0;
     display: flex;
+    position: relative;
 
 }
 
@@ -408,6 +409,34 @@ div.about{
     font-family: "Roboto Slab", sans-serif;
     letter-spacing: 0;
 }
+/*bottoms sliker*/
+div.prev{
+    background-color: #c0301c;
+    width: 35px;
+    height: 38px;
+    position: absolute;
+    top: 106px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.right{
+    right: 0;
+}
+div.prev img{
+    height: 14px;
+    width: 8px;
+}
+
+/*latest work*/
+.latest-works .selection .work-button{
+    display: inline-block;
+    color: #555555;
+}
+
+
+
 
 @media screen and (max-width: 1024px) {
 
