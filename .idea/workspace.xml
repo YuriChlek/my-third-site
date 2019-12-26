@@ -36,18 +36,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mu.secon.site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../counter" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OSPanel\domains\third-site" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OSPanel\domains\my-third-site\img" />
       <recent name="E:\OSPanel\domains\my-third-site\js" />
       <recent name="E:\OSPanel\domains\my-third-site\style" />
       <recent name="E:\OSPanel\domains\third-site\style\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\OSPanel\domains\third-site" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,6 +85,18 @@
       <workItem from="1569165362438" duration="6672000" />
       <workItem from="1569431236159" duration="8354000" />
       <workItem from="1569517050683" duration="4023000" />
+      <workItem from="1569674162481" duration="3456000" />
+      <workItem from="1569742199468" duration="6755000" />
+      <workItem from="1569758830391" duration="4253000" />
+      <workItem from="1569928666432" duration="263000" />
+      <workItem from="1569928960005" duration="15000" />
+      <workItem from="1570351000362" duration="2468000" />
+      <workItem from="1570686090622" duration="58000" />
+      <workItem from="1571328483755" duration="1000" />
+      <workItem from="1573075907766" duration="235000" />
+      <workItem from="1573857095421" duration="181000" />
+      <workItem from="1574114437632" duration="1000" />
+      <workItem from="1574860969536" duration="27000" />
     </task>
     <servers />
   </component>

@@ -29,7 +29,7 @@
         nextArrow: '<div class="prev left"><img src="/img/fa-angle-left.png" alt="prev"></div>',
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -38,14 +38,14 @@
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 320,
+                breakpoint: 321,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
